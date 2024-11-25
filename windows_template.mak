@@ -8,12 +8,13 @@
 #  SQM_CMD_RUN = Running test command
 # [Remark]
 # 1. include this makefile in the main makefile.
+# 2. Use back slash, '/', as the folder seprator
 
 #[Phony Targets]
 .PHONY: show run clean
 
 #[Pre-defined Variables]
-SQM_FILE_DEP = $(patsubst %.cpp,.Dep/%.d,$(subst :,_C,$(subst /,_S,$(subst _,_U,$(SQMFILE_SRC)))))
+SQM_FILE_DEP = $(patsubst %.cpp,.Dep/%.d,$(subst :,_C,$(subst /,_S,$(subst _,_U,$(SQM_FILE_SRC)))))
 SQM_FILE_OBJ = $(patsubst %.cpp,.Obj/%.o,$(subst :,_C,$(subst /,_S,$(subst _,_U,$(SQM_FILE_SRC)))))
 
 #[Final]
