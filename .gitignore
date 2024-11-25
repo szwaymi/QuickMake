@@ -1,2 +1,3 @@
-/main.cpp
-/Test
+.Dep/
+.Obj/
+QuickMake.exe
