@@ -16,11 +16,12 @@
 #[Pre-defined Variables]
 SQM_FILE_DEP = $(patsubst %.cpp,.Dep/%.d,$(subst :,_C,$(subst /,_S,$(subst _,_U,$(SQM_FILE_SRC)))))
 SQM_FILE_OBJ = $(patsubst %.cpp,.Obj/%.o,$(subst :,_C,$(subst /,_S,$(subst _,_U,$(SQM_FILE_SRC)))))
+SQM_GPP_LINK_ARG ?=
 
 #[Final]
 $(SQM_FILE_TARGET): $(SQM_FOLDER_DEP) $(SQM_FOLDER_OBJ) $(SQM_FILE_OBJ)
 	@echo Linking...
-	@g++ $(SQM_FILE_OBJ) -o $@
+	@g++ $(SQM_GPP_LINK_ARG) $(SQM_FILE_OBJ) -o $@
 	@powershell Write-Host -ForegroundColor Green Done
 
 #[Folder]
