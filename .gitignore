@@ -1,3 +1,4 @@
 .Dep/
 .Obj/
+build.bat
 QuickMake.exe
