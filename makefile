@@ -5,4 +5,8 @@ SQM_FOLDER_DEP = .Dep
 SQM_FOLDER_OBJ = .Obj
 SQM_CMD_RUN = ./QuickMake
 
-include windows_template.mak
+ifeq ($(OS), Windows_NT)
+#include windows_template.mak
+else
+include linux.mak
+endif
