@@ -6,7 +6,7 @@ SQM_FOLDER_OBJ = .Obj
 SQM_CMD_RUN = ./QuickMake
 
 ifeq ($(OS), Windows_NT)
-#include windows_template.mak
+include windows.mak
 else
 include linux.mak
 endif
