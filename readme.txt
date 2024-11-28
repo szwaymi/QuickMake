@@ -17,7 +17,17 @@
 
 [OS and Makefile]
 
-    windows_template.mak    For windows, it would use powershell as shell.
-    linux_template.mak      For linux, however, the shell is not confirmed.
+    Makefile
 
+    windows.mak    For windows, it would use powershell as shell.
+    linux.mak      For linux, however, the shell is not confirmed.
 
+    Including
+
+    Use the codes below to include suitable makefile.
+
+    ifeq ($(OS), Windows_NT)
+    include windows.mak
+    else
+    include linux.mak
+    endif
