@@ -53,4 +53,4 @@ run: $(SQM_FILE_TARGET)
 	@$(SQM_CMD_RUN)
 
 #[Includes]
-include $(SQM_FILE_DEP)
+-include $(SQM_FILE_DEP)
