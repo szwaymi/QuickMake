@@ -29,7 +29,7 @@ $(SQM_FOLDER_DEP)/%.d: $(SQM_FOLDER_DEP)
 
 $(SQM_FOLDER_OBJ)/%.o:
 	@echo Creating $@
-	@g++ -c $(subst _C,:,$(subst _S,/,$(subst _U,_,$(patsubst %.o,%.cpp,$(notdir $@))))) -o $@
+	@g++ -c $(SQM_GPP_COMPILE_ARG) $(subst _C,:,$(subst _S,/,$(subst _U,_,$(patsubst %.o,%.cpp,$(notdir $@))))) -o $@
 
 #[Function Target]
 #	Show Dependencies and Objects
