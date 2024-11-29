@@ -1,14 +1,21 @@
 [SQM] = SWT Qucik Make Template
 ----------------------------------------------------------------------------
-[Arguments] 
+[Make Arguments] 
     
     Please define the variables below in the main makefile
+
+    Projects
 
     SQM_FILE_TARGET = The final target file name 
     SQM_FILE_SRC = The source files
     SQM_FOLDER_DEP = Folder for the dependency rule files.
     SQM_FOLDER_OBJ = Folder for the object files
     SQM_CMD_RUN = Running test command
+
+    g++
+
+    SQM_GPP_LINK_ARG = Linking Arguments
+    SQM_GPP_COMPILE_ARG = Compiling Arguments
 
 [Remark]
     
