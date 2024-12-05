@@ -6,6 +6,8 @@
 SQM_FILE_DEP = $(patsubst %.cpp,.Dep/%.d,$(subst :,_C,$(subst /,_S,$(subst _,_U,$(SQM_FILE_SRC)))))
 SQM_FILE_OBJ = $(patsubst %.cpp,.Obj/%.o,$(subst :,_C,$(subst /,_S,$(subst _,_U,$(SQM_FILE_SRC)))))
 SQM_GPP_LINK_ARG ?=
+SQM_GPP_COMPILE_ARG ?=
+
 
 #[Final]
 $(SQM_FILE_TARGET): $(SQM_FOLDER_DEP) $(SQM_FOLDER_OBJ) $(SQM_FILE_OBJ)
